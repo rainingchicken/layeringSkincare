@@ -9,3 +9,4 @@ Progress:
 
 Surface level research
 https://www.skin.software/journal/skincare-ingredients-that-dont-mix
+https://www.laroche-posay.com.au/blog/perfect-serum-pairings-how-to-layer-serums-and-ingredients.html
