@@ -8,5 +8,7 @@ Progress:
 2. I am going to use python to do data analysis to extract key ingredients such as vitamin C, Retinol, Niacinamide, etc.  
 
 Surface level research
-https://www.skin.software/journal/skincare-ingredients-that-dont-mix
+https://www.skin.software/journal/skincare-ingredients-that-dont-mix, 
 https://www.laroche-posay.com.au/blog/perfect-serum-pairings-how-to-layer-serums-and-ingredients.html
+
+3. I cannot figure an easy way to get variables from python to js so I tried looking at sql in node.js but that looks scary that I have to log in and out of database. So instead of trying to get and use python or SQL, just have js read csv file directly. Maybe it will be easier to use python to clean csv and store it in another csv file?  
