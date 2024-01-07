@@ -10,5 +10,12 @@ Progress:
 Surface level research
 https://www.skin.software/journal/skincare-ingredients-that-dont-mix, 
 https://www.laroche-posay.com.au/blog/perfect-serum-pairings-how-to-layer-serums-and-ingredients.html
+https://inside-our-products.loreal.com/ingredients/retinol
+https://inside-our-products.loreal.com/ingredients/vitamin-c#:~:text=Vitamin%20C%20is%20used%20in,ASCORBIC%20ACID%20and%20ASCORBYL%20GLUCOSIDE.
+https://www.medicalnewstoday.com/articles/alpha-hydroxy-acid
+https://www.fda.gov/cosmetics/cosmetic-ingredients/beta-hydroxy-acids
+https://www.cerave.com/skin-smarts/skincare-tips-advice/understanding-the-differences-between-ahas-and-bhas
+
+
 
 3. I cannot figure an easy way to get variables from python to js so I tried looking at sql in node.js but that looks scary that I have to log in and out of database. So instead of trying to get and use python or SQL, just have js read csv file directly. Maybe it will be easier to use python to clean csv and store it in another csv file?  
