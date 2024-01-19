@@ -104,6 +104,7 @@ function submitcheck() {
 
   var indexes = []; //to get ingredient at index
   inputArr.forEach((arrElement) => {
+    //create collapsible div that to show and hide ingredient list
     product.forEach((prodElement) => {
       //for each array element
       //compare it to product list
@@ -119,7 +120,7 @@ function submitcheck() {
     let ingredientlist = ingredient[i];
     layer.push(ingredientlist);
   });
-
+  console.log(layer);
   //flags for each ingredients that one should take caution when using
   var retinol = false;
   var vitc = false;
@@ -175,46 +176,63 @@ function submitcheck() {
     }
   });
 
+  var warning = [];
   //checks conditions
-  if (retinol && benzoylperoxide) {
+  if (
+    retinol ||
+    vitc ||
+    benzoylperoxide ||
+    salicylicacid ||
+    aha ||
+    bha ||
+    niacinamide ||
+    hydroquinone
+  ) {
+    if (retinol && benzoylperoxide) {
+      warning.push(" retinol and benzoyl peroxide");
+    }
+    if (retinol && vitc) {
+      warning.push(" retinol and vitamin C");
+    }
+    if (retinol && salicylicacid) {
+      warning.push(" retinol and salicylic acid");
+    }
+    if (retinol && aha) {
+      warning.push(" retinol and alpha hydroxy acids");
+    }
+    if (retinol && bha) {
+      warning.push(" retinol and beta hydroxy acids");
+    }
+    if (vitc && aha) {
+      warning.push(" vitamin C and alpha hydroxy acids");
+    }
+    if (vitc && bha) {
+      warning.push(" vitamin C and beta hydroxy acids");
+    }
+    if (vitc && benzoylperoxide) {
+      warning.push(" vitamin C and benzoyl peroxide");
+    }
+    if (niacinamide && aha) {
+      warning.push(" niacinamide and alpha hydroxy acids");
+    }
+    if (niacinamide && bha) {
+      warning.push(" niacinamide and beta hydroxy acids");
+    }
+    if (hydroquinone && benzoylperoxide) {
+      warning.push(" hydroquinone and benzoyl peroxide");
+    }
+  }
+
+  //recommendation status
+  if (warning.length > 0) {
     document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both retinol and benzoyl peroxide";
-  } else if (retinol && vitc) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both retinol and vitamin C";
-  } else if (retinol && salicylicacid) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both retinol and salicylic acid";
-  } else if (retinol && aha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both retinol and alpha hydroxy acids";
-  } else if (retinol && bha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both retinol and beta hydroxy acids";
-  } else if (vitc && aha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both vitamin C and alpha hydroxy acids";
-  } else if (vitc && bha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both vitamin C and beta hydroxy acids";
-  } else if (vitc && benzoylperoxide) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both vitamin C and benzoyl peroxide";
-  } else if (niacinamide && aha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both niacinamide and alpha hydroxy acids";
-  } else if (niacinamide && bha) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both niacinamide and beta hydroxy acids";
-  } else if (hydroquinone && benzoylperoxide) {
-    document.getElementById("result").innerHTML =
-      "Not recommended! Products contain both hydroquinone and benzoylperoxide";
+      "Not recommended! Products contain combinations of" + warning;
   } else {
     document.getElementById("result").innerHTML = "Everything looks good!";
   }
 
   //reset when click submit
-  document.getElementById("myform").reset();
+  document.getElementById("myform").reload();
   retinol = false;
   vitc = false;
   benzoylperoxide = 0;
