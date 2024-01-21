@@ -11,9 +11,9 @@ This is website in which you are able to check your skincare products compatabil
 I recently got into skincare due to random YouTube recommendation. Therefore, I decided to follow influencers (doctors/dermatologist) and purchase their recommended products. I started breaking out right away. I thought it was skin purging where the products are bringing out all the inpurities and clense from the inside. A month went by I decided to lessen usuage of each product and ultimately not use them at all. My skin that was really red and bumpy became normal again. So I create this website to expedite the process of research of wether or not the different products go together. Overall, I wasted money and ruined my okay skin. 
 
 ## Coming (not so) Soon Features
-~hide and unhide ingredient~
-~show which product has which ingredients that are conflicting with each other~
-prompt to save products and their ingredients that are not already in the database
+- ~hide and unhide ingredient~
+- ~show which product has which ingredients that are conflicting with each other~
+- prompt to save products and their ingredients that are not already in the database
 
 ## Surface level research
 - https://www.skin.software/journal/skincare-ingredients-that-dont-mix, 
