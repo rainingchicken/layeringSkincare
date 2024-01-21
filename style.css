@@ -1,26 +1,33 @@
-/*https://www.color-hex.com/color-palette/83704*/
+/* https://coolors.co/6ccff6-51a0bd-367084-001011-0f1d1f-1e2a2d-3b4449-757780-fffffc
+ */
+:root {
+  --backgroundcolor: #001011;
+  --maincolor: #367084;
+  --buttoncolor: #0F1D1F;
+  --inputboxcolor: #000;
+  --ingredientcolor: #000;
+  --suggestioncolor: #000;
+  --ingredientbuttoncolor: #0F1D1F;
+  --hoverbuttoncolor: #51A0BD;
+  --footercolor: #001011;
+  --bordercolor: #ffffff;
+  --textcolor: #ffffff;
+}
 
 html,
 body {
-  background-color: #223f57;
+  background-color: var(--backgroundcolor);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
+  color: var(--textcolor);
+  align-items: center;
   width: fit-content;
-  width: 100%;
-  margin: auto 0;
-
-
+  margin: auto;
 }
 
 main {
-  background-color: #4f7696;
-  padding: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 1%;
-  border-style: solid;
-  border-radius: 10px;
+  background-color: var(--maincolor);
+  padding: 5%;
 }
 
 header {
@@ -34,10 +41,11 @@ img {
 #addbtn,
 #submitbtn {
   cursor: pointer;
-  width: 90px;
-  height: 50px;
+  width: 6rem;
+  height: 3rem;
   display: inline-block;
-  margin: 10px;
+  margin: 1%;
+  margin-top: 3%;
   border-radius: 10px;
   /*align button horizontally idk wht its vertical*/
   vertical-align: top;
@@ -45,53 +53,80 @@ img {
 }
 
 button {
-  left: 10px;
   cursor: pointer;
-  width: 200px;
-  margin: 10px;
+  width: 3rem;
+  margin: 1rem;
+  margin-bottom: 1%;
   border-radius: 10px;
-  width: 90px;
-  height: 25px;
-  border-color: #bbbbbb;
-  background-color: #223f57;
-  color: #ffffff;
+  width: 6rem;
+  height: 2rem;
+  border-color: var(--bordercolor);
+  background-color: var(--buttoncolor);
+  color: var(--textcolor);
 
 }
 
 button:hover {
-  background-color: #bbbbbb;
+  background-color: var(--hoverbuttoncolor);
   /* Add a dark-grey background on hover */
 }
 
-form {
-  align-items: center;
+/* get element by name */
+div[name="divname"] {
+  margin-bottom: 2rem;
+
+
 }
 
 
 input {
   border-radius: 10px;
   display: inline-block;
-  width: 500px;
-  height: 25px;
+  width: 40rem;
+  height: 2rem;
+  margin-bottom: 0;
 }
 
+/* button to show or hide ingredient
+ */
+.collapsebox {
+  border-radius: 0px;
+  display: block;
+  background-color: var(--ingredientbuttoncolor);
+  width: 47.5rem;
+  margin: 0rem;
+}
+
+/* box containing the list of ingredient will start of hidden
+ */
+.collapse {
+  display: none;
+  /* border: solid; */
+  width: 45.5rem;
+  background-color: var(--ingredientcolor);
+  margin: 0rem;
+  margin-bottom: 2%;
+  padding: 1rem;
+  line-height: 1.5;
+}
 
 #suggestions {
-  border: 0px #ccc;
+  border: 0px;
   padding: 3px;
   text-align: justify;
-  margin-left: 200px;
-  background-color: #315b7d;
-  width: max-content;
+  border-color: var(--bordercolor);
+  background-color: var(--suggestioncolor);
+  width: 47.5rem;
 }
 
 #result,
 #inputs {
   padding: 8px;
   border: 1px;
-  border-style: outset;
-  border-color: white;
-  margin-bottom: 5px;
+  border-color: var(--bordercolor);
+  margin-bottom: 0;
+  background-color: var(--inputboxcolor);
+  width: 47.5rem;
 }
 
 #inputs {
@@ -99,25 +134,19 @@ input {
 }
 
 #foot {
-  margin-top: 30px;
-  margin-left: 20%;
-  margin-right: 20%;
   padding: 2rem 2rem;
-  background-color: #7d9cb6;
-  border-radius: 10px;
+  background-color: var(--footercolor);
+  /* border-top: solid; */
 }
 
 /* https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 #topbutton {
   /* Hidden by default */
-  bottom: 20px;
-  left: 10%;
-  color: #000000;
-  text-shadow: #ffffff;
+  bottom: 1%;
+  right: 1%;
   display: none;
   position: fixed;
-
-  background-color: #315b7d;
+  background-color: var(--buttoncolor);
   /* Set a background color */
   /* Text color */
   cursor: pointer;
@@ -129,12 +158,12 @@ input {
   font-size: 28px;
   /* Increase font size */
   outline: none;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 #topbutton:hover {
-  background-color: #bbbbbb;
+  background-color: var(--hoverbuttoncolor);
   /* Add a dark-grey background on hover */
 
 }
