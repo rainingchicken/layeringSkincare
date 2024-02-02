@@ -4,46 +4,55 @@
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skincare Layering Guide</title>
+  <meta name="description" content="skincare routine checker project" />
   <script src="./module/product.js"> </script>
   <script src="./module/ingredient.js"> </script>
   <script src="main.py"> </script>
 
 </head>
 
-
 <body>
-  <header>
-    <img id='logo' src="rainingchickenlogoblue.png" alt="baby chick logo">
+  <header id="myheader">
+    <a href="index.html"><img id='logo' title="Home" src="rainingchickenlogoblue.png" alt="baby chick logo"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skincaretips.html">Skincare Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="hcontainer">
     <h1> Can I Layer These? </h1>
     <h2> A guide on how to layer skincare product </h2>
-
-  </header>
-
+  </div>
   <main>
-    <p id="inputs"> Let's see!</p>
     <div id="result">
+      Let's see! <br>
       Submit the products you want to check!
     </div>
     <button id="addbtn" onclick="addElement()" title="Click to add more product"> ADD PRODUCT</button>
     <button id="submitbtn" onclick="submitcheck()" title="Click to check product compatibility "> SUBMIT </button>
     <form id="myform" autocomplete="off">
       <div id="div1">
-
       </div>
     </form>
   </main>
 
   <footer id='foot'>
     <button onclick="scrolltotop()" id="topbutton" title="Scroll to Top"> ^ </button>
-    <p> <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" width=5%>
-    </p>
-    <p> <a href="https://github.com/rainingchicken/LayeringSkincare/tree/main">rainingchicken</a>
-    </p>
+    <address>
+      <p> <a href="https://github.com/rainingchicken/LayeringSkincare/tree/main"><img
+            src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" width=5% alt="Github Website">
+        </a></p>
+      <p> <a id="githublink" href="https://github.com/rainingchicken/LayeringSkincare/tree/main">rainingchicken</a>
+      </p>
+    </address>
   </footer>
 
   <script type="text/javascript" src="script.js"> </script>
-
 
 </body>
 

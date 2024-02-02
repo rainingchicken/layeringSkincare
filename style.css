@@ -3,6 +3,7 @@
 :root {
   --backgroundcolor: #001011;
   --maincolor: #367084;
+  --headercolor: #000;
   --buttoncolor: #0F1D1F;
   --inputboxcolor: #000;
   --ingredientcolor: #000;
@@ -14,6 +15,13 @@
   --textcolor: #ffffff;
 }
 
+/*For those who might be bothered by the animation*/
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 html,
 body {
   background-color: var(--backgroundcolor);
@@ -21,21 +29,96 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--textcolor);
   align-items: center;
-  width: fit-content;
   margin: auto;
+}
+
+header {
+  margin: 0;
+  width: 100%;
+  background-color: var(--headercolor);
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  position: static;
+  top: 0;
+  height: 70px;
+  border: 0;
+}
+
+#hcontainer h2 {
+  border: 0;
+}
+
+header img {
+  width: max(46px, 4vw);
+  height: 46px;
+  padding: 0.5rem;
+  margin-left: 100%;
+}
+
+nav {
+  width: 75%;
+  max-width: 300px;
+  height: 70px;
+  margin-right: 5%;
+}
+
+nav>ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav>ul>li {
+  color: var(--textcolor);
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  display: block;
+  border: none solid var(--bordercolor);
+  border-radius: 10px;
+}
+
+nav>ul>li:hover {
+  background-color: var(--hoverbuttoncolor);
+  cursor: pointer;
+}
+
+li>a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+#hcontainer {
+  background-color: var(--headercolor);
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding-bottom: 0.5rem;
 }
 
 main {
   background-color: var(--maincolor);
-  padding: 5%;
+  padding: 4% 6%;
+  width: fit-content;
+  margin: auto;
 }
 
-header {
-  margin: 2%;
-}
-
-img {
-  width: 5%;
+#result {
+  padding: 1rem;
+  border: 1px;
+  border-color: var(--bordercolor);
+  background-color: var(--inputboxcolor);
+  width: 45rem;
+  line-height: 2.5em;
 }
 
 #addbtn,
@@ -43,7 +126,7 @@ img {
   cursor: pointer;
   width: 6rem;
   height: 3rem;
-  display: inline-block;
+  display: flex 1 2;
   margin: 1%;
   margin-top: 3%;
   border-radius: 10px;
@@ -53,38 +136,38 @@ img {
 }
 
 button {
+  color: var(--textcolor);
   cursor: pointer;
-  width: 3rem;
-  margin: 1rem;
-  margin-bottom: 1%;
-  border-radius: 10px;
   width: 6rem;
+  border-radius: 10px;
   height: 2rem;
   border-color: var(--bordercolor);
   background-color: var(--buttoncolor);
-  color: var(--textcolor);
-
 }
 
 button:hover {
   background-color: var(--hoverbuttoncolor);
-  /* Add a dark-grey background on hover */
 }
 
 /* get element by name */
 div[name="divname"] {
-  margin-bottom: 2rem;
-
+  max-width: 752px;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 }
 
-
 input {
   border-radius: 10px;
-  display: inline-block;
-  width: 40rem;
+  width: 39rem;
   height: 2rem;
-  margin-bottom: 0;
+}
+
+.deletebtn {
+  margin-top: 0.2rem;
 }
 
 /* button to show or hide ingredient
@@ -93,19 +176,16 @@ input {
   border-radius: 0px;
   display: block;
   background-color: var(--ingredientbuttoncolor);
-  width: 47.5rem;
-  margin: 0rem;
+  width: 776px;
+  margin-top: 0.4rem;
 }
 
 /* box containing the list of ingredient will start of hidden
  */
 .collapse {
   display: none;
-  /* border: solid; */
-  width: 45.5rem;
+  width: 776px;
   background-color: var(--ingredientcolor);
-  margin: 0rem;
-  margin-bottom: 2%;
   padding: 1rem;
   line-height: 1.5;
 }
@@ -116,21 +196,7 @@ input {
   text-align: justify;
   border-color: var(--bordercolor);
   background-color: var(--suggestioncolor);
-  width: 47.5rem;
-}
-
-#result,
-#inputs {
-  padding: 8px;
-  border: 1px;
-  border-color: var(--bordercolor);
-  margin-bottom: 0;
-  background-color: var(--inputboxcolor);
-  width: 47.5rem;
-}
-
-#inputs {
-  border-style: hidden;
+  width: 776px;
 }
 
 #foot {
@@ -160,10 +226,87 @@ input {
   outline: none;
   width: 3rem;
   height: 3rem;
+  margin: 1.3%;
 }
 
 #topbutton:hover {
   background-color: var(--hoverbuttoncolor);
   /* Add a dark-grey background on hover */
 
+}
+
+#githublink {
+  color: var(--maincolor);
+  padding: 0.5rem;
+  border: none solid var(--bordercolor);
+  border-radius: 10px;
+}
+
+#githublink:hover {
+  background-color: var(--hoverbuttoncolor);
+  color: var(--footercolor);
+  cursor: pointer;
+}
+
+
+/* skincare tips page */
+.skincaretips {
+  text-align: left;
+  width: 55%;
+  max-width: 100em;
+  margin: auto;
+}
+
+.skincaretips h1 {
+  border: 0;
+  font-size: 32px;
+}
+
+.skincaretips h1,
+h2 {
+  border: 1px solid var(--textcolor);
+  padding: 0.1rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gridelements {
+  max-width: 100px;
+  padding: 20px;
+  text-align: center;
+}
+
+.gridsize {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: left;
+  width: 33%;
+}
+
+
+.routine {
+  border-bottom: 1px solid var(--textcolor);
+}
+
+#skincaretipsnav {
+  width: 100%;
+  background-color: var(--maincolor);
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  position: static;
+  top: 70px;
+}
+
+#skincaretipsnav nav {
+  width: 55%;
+  max-width: 800px;
+  height: 70px;
+  margin: 0 auto;
 }

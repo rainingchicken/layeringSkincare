@@ -6,6 +6,7 @@ function addElement() {
   //create div
   const newdiv = document.createElement("div");
   newdiv.setAttribute("name", "divname");
+  newdiv.setAttribute("class", "divnames");
   newdiv.setAttribute("id", "ddiv" + n);
 
   //create input box
@@ -24,7 +25,7 @@ function addElement() {
     "title",
     "Click to show or hide ingredients of product"
   );
-  ingredientbox.textContent = "SHOW/HIDE INGREDIENTS";
+  ingredientbox.textContent = "TOGGLE SHOW/HIDE INGREDIENTS";
 
   //create div that shows when pressed button
   const collapsediv = document.createElement("div");
@@ -40,6 +41,7 @@ function addElement() {
   deletebtn.setAttribute("type", "button");
   deletebtn.setAttribute("onclick", "remove(this)"); //when click delete div and everything in it
   deletebtn.setAttribute("title", "Delete product");
+  deletebtn.setAttribute("class", "deletebtn");
 
   //put created elements in newdiv so they are grouped together and will easily deleted
   newdiv.appendChild(newinput);
@@ -270,7 +272,8 @@ function submitcheck() {
   //recommendation status
   if (warning.length > 0) {
     document.getElementById("result").innerHTML =
-      "Not recommended! Products contain combinations of" + warning;
+      "Not recommended! Products contain the following combination(s):" +
+      warning;
     //if products are not recommended together show ingredients to help user choose which to keep
     for (
       let ingredientbuttons = 0;
@@ -366,5 +369,22 @@ addEventListener("scroll", (event) => {
 
 // when click scroll to the top of the document
 function scrolltotop() {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0 });
 }
+
+// Get the header
+var header = document.getElementById("myheader");
+
+var previousscroll = window.scrollY;
+
+//when scrolling detected
+addEventListener("scroll", (event) => {
+  var currentscroll = window.scrollY;
+  //if previous scroll Y is greater than current scroll Y this means user scrolled up
+  if (previousscroll > currentscroll) {
+    header.style.position = "sticky"; //change css header {positition:sticky} which shows header on top of screen
+  } else {
+    header.style.position = "static"; //puts header back on top of page
+  }
+  previousscroll = currentscroll;
+});

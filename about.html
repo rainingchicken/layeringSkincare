@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skincare Layering Guide About Page</title>
+    <meta name="description" content="skincare routine checker project introducing myself" />
+
+</head>
+
+<body>
+    <header id="myheader">
+        <a href="index.html"><img id='logo' title="Home" src="rainingchickenlogoblue.png" alt="baby chick logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skincaretips.html">Skincare Tips</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About Me</h1>
+        <p style="text-align: left;">HI! I am not a trained professional. My goal is to help simplify the process of
+            deciding your skincare routine which has the added benefits of saving time, money, and your skin from
+            potential harm due to layering conflicting products. This is a
+            personal project and all codes and assets are available on my GitHub.</p>
+    </main>
+
+    <footer id='foot'>
+        <button onclick="scrolltotop()" id="topbutton" title="Scroll to Top"> ^ </button>
+        <address>
+            <p> <a href="https://github.com/rainingchicken/LayeringSkincare/tree/main"><img
+                        src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" width=5%
+                        alt="Github Website">
+                </a></p>
+            <p> <a id="githublink"
+                    href="https://github.com/rainingchicken/LayeringSkincare/tree/main">rainingchicken</a>
+            </p>
+        </address>
+    </footer>
+    <script type="text/javascript">
+        // Get the button:
+        let mybutton = document.getElementById("topbutton");
+
+        //when scrolling detected
+        addEventListener("scroll", (event) => {
+            if (window.scrollY > 20) {
+                //if scrolled pass current px
+                mybutton.style.display = "block"; //displays button to go to top
+            } else {
+                mybutton.style.display = "none"; //if near top of screen no need to show button
+            }
+        });
+
+        // when click scroll to the top of the document
+        function scrolltotop() {
+            window.scrollTo({ top: 0 });
+        }
+
+        // Get the header
+        var header = document.getElementById("myheader");
+        var previousscroll = window.scrollY;
+
+        //when scrolling detected
+        addEventListener("scroll", (event) => {
+            var currentscroll = window.scrollY;
+            //if previous scroll Y is greater than current scroll Y this means user scrolled up
+            if (previousscroll > currentscroll) {
+                header.style.position = "sticky"; //change css header {positition:sticky} which shows header on top of screen
+            } else {
+                header.style.position = "static"; //puts header back on top of page
+            }
+            previousscroll = currentscroll;
+        }); </script>
+</body>
+
+</html>
