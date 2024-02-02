@@ -14,7 +14,7 @@ I recently got into skincare due to random YouTube recommendation. Therefore, I 
 - ~hide and unhide ingredient~
 - ~show which product has which ingredients that are conflicting with each other~
 - prompt to save products and their ingredients that are not already in the database
-- actually written out how-to page explaining what to do (keep or not keep product) and what each conflicting ingredient does to your skin. Basically a more-info page
+- ~actually written out how-to page explaining what to do (keep or not keep product) and what each conflicting ingredient does to your skin. Basically a more-info page
 
 ## Surface level research
 - https://www.skin.software/journal/skincare-ingredients-that-dont-mix, 
@@ -24,6 +24,7 @@ I recently got into skincare due to random YouTube recommendation. Therefore, I 
 - https://www.medicalnewstoday.com/articles/alpha-hydroxy-acid
 - https://www.fda.gov/cosmetics/cosmetic-ingredients/beta-hydroxy-acids
 - https://www.cerave.com/skin-smarts/skincare-tips-advice/understanding-the-differences-between-ahas-and-bhas
+- https://www.nm.org/healthbeat/healthy-tips/do-you-really-need-a-skin-care-routine#:~:text=The%20easiest%20way%20to%20remember,their%20face%20once%20a%20day.
 
 <hr>
 
@@ -44,3 +45,4 @@ I recently got into skincare due to random YouTube recommendation. Therefore, I 
 
 8. I redesign the website so it does not look as rustic. I tried contrasting color pallettes of 10 colors but I find that 3 colors (2 darks and one light) is enough to keep it interesting without becoming ugly or overwhelming.
 
+9. Created multiple pages (about, skincare tips, home). The information in skincare tips are not detailed but it is good enough to understand what to look for in a skin product. I am having problem choosing units in css and dealthing with display boxes. Right now, everything wraps not really good so the next time i work on this i need to make page dynamically size better. Also writing in pure html is tedious. I appreciate word and google doc so much with the easy formatting. I also really need a more complete dataset.
