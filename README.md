@@ -14,7 +14,7 @@ I recently got into skincare due to random YouTube recommendation. Therefore, I 
 - ~hide and unhide ingredient~
 - ~show which product has which ingredients that are conflicting with each other~
 - prompt to save products and their ingredients that are not already in the database
-- ~actually written out how-to page explaining what to do (keep or not keep product) and what each conflicting ingredient does to your skin. Basically a more-info page
+- ~actually written out how-to page explaining what to do (keep or not keep product) and what each conflicting ingredient does to your skin. Basically a more-info page~
 
 ## Surface level research
 - https://www.skin.software/journal/skincare-ingredients-that-dont-mix, 
