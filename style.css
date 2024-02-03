@@ -30,6 +30,7 @@ body {
   color: var(--textcolor);
   align-items: center;
   margin: auto;
+  width: 100%;
 }
 
 header {
@@ -105,11 +106,19 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-main {
+.home {
   background-color: var(--maincolor);
   padding: 4% 6%;
   width: fit-content;
   margin: auto;
+  max-width: 80vw;
+}
+
+main {
+  background-color: var(--maincolor);
+  padding: 4% 6%;
+  margin: auto 0;
+
 }
 
 #result {
@@ -117,8 +126,8 @@ main {
   border: 1px;
   border-color: var(--bordercolor);
   background-color: var(--inputboxcolor);
-  width: 45rem;
   line-height: 2.5em;
+
 }
 
 #addbtn,
@@ -248,12 +257,11 @@ input {
   cursor: pointer;
 }
 
-
 /* skincare tips page */
+
 .skincaretips {
   text-align: left;
-  width: 55%;
-  max-width: 100em;
+  max-width: 50vw;
   margin: auto;
 }
 
@@ -265,9 +273,9 @@ input {
 .skincaretips h1,
 h2 {
   border: 1px solid var(--textcolor);
-  padding: 0.1rem;
+  padding: 0.3rem;
   text-align: center;
-  margin: 2rem;
+  margin: 3rem;
 }
 
 .grid {
@@ -296,17 +304,17 @@ h2 {
 
 #skincaretipsnav {
   width: 100%;
-  background-color: var(--maincolor);
   display: flex;
   justify-content: space-between;
-  padding: 0;
   position: static;
   top: 70px;
 }
 
 #skincaretipsnav nav {
-  width: 55%;
-  max-width: 800px;
-  height: 70px;
+  padding: 10px;
+  width: 50%;
+  max-width: 90vw;
+  height: fit-content;
   margin: 0 auto;
+  background-color: var(--maincolor);
 }
