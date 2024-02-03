@@ -46,3 +46,5 @@ I recently got into skincare due to random YouTube recommendation. Therefore, I 
 8. I redesign the website so it does not look as rustic. I tried contrasting color pallettes of 10 colors but I find that 3 colors (2 darks and one light) is enough to keep it interesting without becoming ugly or overwhelming.
 
 9. Created multiple pages (about, skincare tips, home). The information in skincare tips are not detailed but it is good enough to understand what to look for in a skin product. I am having problem choosing units in css and dealthing with display boxes. Right now, everything wraps not really good so the next time i work on this i need to make page dynamically size better. Also writing in pure html is tedious. I appreciate word and google doc so much with the easy formatting. I also really need a more complete dataset.
+
+10. I was able to make the page scale correctly depending on screen size. Inputs, buttons, and text wrap nicely when screen size varies. One thing i want to add is to make a dropdown nav when screen is small. 
