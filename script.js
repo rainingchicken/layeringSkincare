@@ -44,8 +44,8 @@ function addElement() {
   deletebtn.setAttribute("class", "deletebtn");
 
   //put created elements in newdiv so they are grouped together and will easily deleted
-  newdiv.appendChild(newinput);
   newdiv.appendChild(deletebtn);
+  newdiv.appendChild(newinput);
   newdiv.appendChild(ingredientbox);
   newdiv.appendChild(collapsediv);
 
