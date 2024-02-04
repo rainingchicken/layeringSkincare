@@ -261,7 +261,8 @@ input {
 
 .skincaretips {
   text-align: left;
-  max-width: 50vw;
+  width: 60%;
+  word-wrap: break-word;
   margin: auto;
 }
 
@@ -275,7 +276,7 @@ h2 {
   border: 1px solid var(--textcolor);
   padding: 0.3rem;
   text-align: center;
-  margin: 3rem;
+  margin: 3rem 0;
 }
 
 .grid {
